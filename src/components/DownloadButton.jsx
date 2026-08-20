@@ -5,10 +5,12 @@ const DownloadButton = ({
   className = "",
 }) => {
   const handleDownload = () => {
-    const link = document.createElement("a");
+    const url = `${window.location.origin}${import.meta.env.BASE_URL}${pdfUrl.replace(/^\/+/, "")}`;
 
-    link.href = `${import.meta.env.BASE_URL}${pdfUrl.replace(/^\/+/, "")}`;
-    link.download = fileName;
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", fileName);
+    link.target = "_blank";
 
     document.body.appendChild(link);
     link.click();
