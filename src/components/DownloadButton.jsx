@@ -1,7 +1,17 @@
-const DownloadButton = ({ pdfUrl, fileName, label = "Descargar", className = "" }) => {
+const DownloadButton = ({
+  pdfUrl,
+  fileName,
+  label = "Descargar",
+  className = "",
+}) => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = pdfUrl;
+
+    const url = pdfUrl.startsWith("/")
+      ? `${import.meta.env.BASE_URL}${pdfUrl.slice(1)}`
+      : pdfUrl;
+
+    link.href = url;
     link.download = fileName;
     link.click();
   };
