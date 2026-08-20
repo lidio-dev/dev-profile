@@ -7,13 +7,12 @@ const DownloadButton = ({
   const handleDownload = () => {
     const link = document.createElement("a");
 
-    const url = pdfUrl.startsWith("/")
-      ? `${import.meta.env.BASE_URL}${pdfUrl.slice(1)}`
-      : pdfUrl;
-
-    link.href = url;
+    link.href = `${import.meta.env.BASE_URL}${pdfUrl.replace(/^\/+/, "")}`;
     link.download = fileName;
+
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   return (
