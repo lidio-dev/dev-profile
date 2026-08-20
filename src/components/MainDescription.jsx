@@ -11,7 +11,7 @@ const MainDescription = () => {
            Bienvenido<span className="text-indigo-400">.</span>
           </h1>
           <p className="text-white text-base font-semibold md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-            Mi nombre es <span className="font-bold text-indigo-400">Lidio Juarez Larriva</span>, Estudiante de Ingeniería en Gestión y Desarrollo de Software en proceso de titulación con experiencia práctica en el desarrollo de sistemas web y móviles. Familiarizado con metodologías modernas en el uso de frameworks para crear soluciones eficientes, escalables y centradas en el usuario. Comprometido con el aprendizaje continuo y la aplicación de buenas prácticas de programación
+            Mi nombre es <span className="font-bold text-indigo-400">Lidio Juarez Larriva</span>, Estudiante de Ingeniería en Gestión y Desarrollo de Software en proceso de titulación con experiencia práctica en el desarrollo de sistemas web y móviles. Familiarizado con metodologías modernas en el uso de frameworks para crear soluciones eficientes, escalables y centradas en el usuario. Comprometido con el aprendizaje continuo y la aplicación de buenas prácticas de programación. Saludos
           </p>
         </div>
 
