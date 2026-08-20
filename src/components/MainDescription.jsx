@@ -25,11 +25,13 @@ const MainDescription = () => {
 
           {/* Botones debajo de la imagen */}
           <div className="flex flex-col md:flex-row gap-4">
-            <DownloadButton 
-              pdfUrl="/documents/CV_LidioJuarez.pdf" 
-              fileName="CV_LidioJuarez.pdf" 
-              label="Descargar CV"
-            />
+            <a
+              href={`${import.meta.env.BASE_URL}documents/CV_LidioJuarez.pdf`}
+              download="CV_LidioJuarez.pdf"
+              className="bg-sky-600 font-bold text-white py-2 px-4 rounded-xl hover:bg-indigo-600 transition"
+            >
+              Descargar
+            </a>
             <a
               href="#projects"
               className="border font-bold border-white text-white py-2 px-4 rounded-xl  hover:bg-white hover:text-[#0f172a] transition"
